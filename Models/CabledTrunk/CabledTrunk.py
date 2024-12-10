@@ -169,7 +169,7 @@ def createScene(rootNode, config):
     # Fix base of the Trunk
     trunk.addObject('BoxROI', name='boxROI', box=[[-20*config.mm, -20*config.mm, -config.d_ext-(config.d_in/2)], [20*config.mm, 20*config.mm, 0]], drawBoxes=True)
     #trunk.addObject('PartialFixedConstraint', fixedDirections=[1, 1, 1], indices='@boxROI.indices')
-    trunk.addObject('RestShapeSpringsForceField', points='@boxROI.indices', stiffness=1e10) 
+    trunk.addObject('RestShapeSpringsForceField', indices='@boxROI.indices', stiffness=1e10)
 
 
     ##################
